@@ -71,7 +71,7 @@ def process_files(ds_names=None):
     
     if not ds_names:
         ds_names = schemas.keys()
-    pprocesses = len(ds_name) if len(ds_name) < 3 else 3
+    pprocesses = len(ds_names) if len(ds_names) < 3 else 3
     pool = multiprocessing.Pool(pprocesses)
     pd_args = []
     for ds_name in ds_names:
